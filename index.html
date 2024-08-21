@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color:white;
+        }
+
+        @media only screen and (max-width:1080px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            height: 100px;
+            width: 100%;
+            color: white;
+            padding: 20px;
+        }
+
+        .aitems {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            /* align-items: flex-end; */
+        }
+
+        .head {
+            font-size: 50px;
+            /* margin-bottom: 10px; */
+
+        }
+
+        .intro1 {
+            font-size: 30px;
+        }
+
+        .img1 {
+            float: left;
+            border: 3px solid black;
+            height: 500px;
+            width: 500px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .img2 {
+            float: right;
+            border: 3px solid black;
+            height: 500px;
+            width: 500px;
+            margin-right: 20px;
+
+
+        }
+
+        .intro2 {
+            font-size: 30px;
+            margin-left: 20px;
+        }
+
+        .intro3,.head3{
+            font-size: 30px;
+            margin-left: 20px;
+            text-align: center;
+        }
+        .ss1{
+            height: 300px;
+            width: 500px;
+            margin-left: 20px;
+        }
+        .ss2{
+            height: 300px;
+            width: 500px;
+            float: right;
+
+        }
+        #contact {
+            padding: 2em;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="AV.JPG.png" class="logo">
+        <nav>
+            <a href="personalportfolio.html" class="aitems">HOME</a>
+            <a href="#ABOUT" class="aitems">ABOUT</a>
+            <a href="#myprojects" class="aitems">SERVICES</a>
+            <a href="personalportfolio.html" class="aitems">CONTACT</a>
+        </nav>
+    </div>
+    <div class="content">
+        <img src="WhatsApp Image 2024-08-21 at 12.14.32 PM.jpeg" class="img1">
+        <div class="text-container">
+            <h1 class="head">HELLO THERE, COMRADES! </h1><br>
+            <p class="intro1">
+                Hi, I'm Apoorva Verma aka AV, a passionate Web Developer, Graphic Designer. I craft websites,visual
+                experiences,apps that combine creativity and functionality to deliver solutions that resonate. Here,
+                you'll
+                find a showcase of my work, where each project tells a story of innovation, dedication, and attention to
+                detail.
+                <br>
+                Explore my journey, and let's create something amazing together :)
+            </p>
+        </div>
+    </div>
+    <br><br>
+    <section id="ABOUT">
+        <img src="DALL·E 2024-08-21 11.54.53 - A modern workspace for a web developer. The setting includes a sleek desktop computer displaying a code editor with HTML, CSS, and JavaScript on the s.webp"
+            class="img2">
+        <div class="text-container"><br><br>
+            <p class="intro2">
+                <b>ABOUT ME</b><br>
+                As a curious web developer with a broad mind, I thrive on exploring new ideas and pushing the boundaries
+                of what's possible in the digital world. My passion lies in creating websites that are not just
+                functional but also innovative and engaging, reflecting a blend of creativity and technical skill. I’m
+                constantly learning, experimenting, and growing, driven by a desire to craft experiences that resonate
+                with users. I invite you to explore my journey, where each project is a testament to my dedication,
+                curiosity, and love for building something extraordinary.
+            </p>
+        </div>
+    </section>
+    <br><br><br><br><br>
+<hr>
+<br><br><br>
+    <section id="myprojects">
+        <div class="text-container">
+            <h1 class="head3">MY PROJECTS</h1><br>
+            <p class="intro3">
+                Here are some of my recent projects that showcase my skills and creativity as a web developer. Each
+                project is a unique blend of design and functionality, crafted with attention to detail and a passion for
+                innovation. From responsive websites to interactive web applications, these projects reflect my commitment
+                to creating digital experiences that captivate and inspire. Explore my work and let's create something
+                amazing together!
+                <br><br>
+                CLICK ON THE PTOJECTS TO GET FULL VIEW
+            </p><br><br>
+            <a href="https://the-soft-brew.vercel.app/">
+                <img src="Screenshot 2024-08-21 at 12.36.06 PM.png" class="ss1">
+            </a>
+            <a href="https://daily-digest-dfv8.vercel.app/">
+                <img src="Screenshot 2024-08-21 at 12.41.38 PM.png" class="ss2">
+            </a>
+        </div>
+    </section><BR><BR>
+
+    <HR>
+        <HR>
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>Email: example@example.com</p>
+                <p>Phone: 123-456-7890</p>
+                <p>Address: 123 Main Street, City, State, Country</p>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Apoorva Verma . All rights reserved.</p>
+        </footer>
+</body>
+
+</html>

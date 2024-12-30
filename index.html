@@ -13,117 +13,281 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-color:white;
-        }
-
-        @media only screen and (max-width:1080px) {
-            body {
-                background-color: blueviolet;
-            }
+            background-color: #f0f0f0;
+            color: #333;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: black;
-            height: 100px;
-            width: 100%;
-            color: white;
-            padding: 20px;
+            background-color: #222;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .aitems {
-            margin: 0 20px;
+        .navbar a {
+            margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: #f0f0f0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #FFD700;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
         }
 
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 60px;
+            background-color: #fff;
+            margin: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .text-container {
-            display: flex;
-            flex-direction: column;
-            /* align-items: flex-end; */
+            max-width: 50%;
         }
 
         .head {
-            font-size: 50px;
-            /* margin-bottom: 10px; */
-
+            font-size: 48px;
+            color: #222;
+            margin-bottom: 20px;
         }
 
         .intro1 {
-            font-size: 30px;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
         }
 
         .img1 {
-            float: left;
-            border: 3px solid black;
-            height: 500px;
-            width: 500px;
-            margin-right: 20px;
+            width: 450px;
+            height: 450px;
             border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .img1:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
         }
 
         .img2 {
-            float: right;
-            border: 3px solid black;
-            height: 500px;
-            width: 500px;
-            margin-right: 20px;
+            width: 450px;
+            height: 450px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
 
-
+        .img2:hover {
+            transform: scale(1.05);
         }
 
         .intro2 {
-            font-size: 30px;
-            margin-left: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
         }
 
-        .intro3,.head3{
+        .intro3,
+        .head3 {
             font-size: 30px;
-            margin-left: 20px;
+            text-align: center;
+            color: #222;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-description {
+            padding: 20px;
             text-align: center;
         }
-        .ss1{
-            height: 300px;
-            width: 500px;
-            margin-left: 20px;
-        }
-        .ss2{
-            height: 300px;
-            width: 500px;
-            float: right;
 
+        .project-description h3 {
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 10px;
         }
+
+        .project-description p {
+            font-size: 16px;
+            color: #555;
+        }
+
         #contact {
-            padding: 2em;
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #222;
+            color: #f0f0f0;
         }
+
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
         footer {
             text-align: center;
-            padding: 1em 0;
+            padding: 20px 0;
+            background-color: #111;
+            color: #f0f0f0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Adjust the content area for the projects section */
+#myprojects .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px; /* Optional: restrict the width for better alignment */
+}
+
+/* Ensure project cards align correctly */
+.project-card {
+    width: calc(33.33% - 20px);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-description {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-description h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .project-card {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+
+        @media only screen and (max-width: 1080px) {
+            body {
+                background-color: #ffebcd;
+            }
+
+            .content {
+                /* flex-direction: column; */
+                padding: 20px;
+            }
+
+            .img1 {
+                margin-bottom: 20px;
+            }
+
+            .text-container {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .img2 {
+                margin-bottom: 20px;
+            }
+
+            .project-card {
+                width: 90%;
+                margin: 20px auto;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="navbar">
-        <img src="AV.JPG.png" class="logo">
+        <img src="AV.JPG.png" class="logo" alt="AV Logo">
         <nav>
             <a href="personalportfolio.html" class="aitems">HOME</a>
             <a href="#ABOUT" class="aitems">ABOUT</a>
@@ -131,74 +295,83 @@
             <a href="personalportfolio.html" class="aitems">CONTACT</a>
         </nav>
     </div>
+
     <div class="content">
-        <img src="WhatsApp Image 2024-08-21 at 12.14.32 PM.jpeg" class="img1">
+        <img src="WhatsApp Image 2024-08-21 at 12.14.32 PM.jpeg" class="img1" alt="Apoorva Verma">
         <div class="text-container">
-            <h1 class="head">HELLO THERE, COMRADES! </h1><br>
+            <h1 class="head">HELLO THERE, COMRADES!</h1>
             <p class="intro1">
-                Hi, I'm Apoorva Verma aka AV, a passionate Web Developer, Graphic Designer. I craft websites,visual
-                experiences,apps that combine creativity and functionality to deliver solutions that resonate. Here,
-                you'll
-                find a showcase of my work, where each project tells a story of innovation, dedication, and attention to
-                detail.
-                <br>
+                Hi, I'm Apoorva Verma aka AV, a passionate Web Developer, Graphic Designer. I craft websites, visual
+                experiences, and apps that combine creativity and functionality to deliver solutions that resonate.
+                Here,
+                you'll find a showcase of my work, where each project tells a story of innovation, dedication, and
+                attention to detail. <br><br>
                 Explore my journey, and let's create something amazing together :)
             </p>
         </div>
     </div>
-    <br><br>
+
     <section id="ABOUT">
-        <img src="DALL·E 2024-08-21 11.54.53 - A modern workspace for a web developer. The setting includes a sleek desktop computer displaying a code editor with HTML, CSS, and JavaScript on the s.webp"
-            class="img2">
-        <div class="text-container"><br><br>
-            <p class="intro2">
-                <b>ABOUT ME</b><br>
-                As a curious web developer with a broad mind, I thrive on exploring new ideas and pushing the boundaries
-                of what's possible in the digital world. My passion lies in creating websites that are not just
-                functional but also innovative and engaging, reflecting a blend of creativity and technical skill. I’m
-                constantly learning, experimenting, and growing, driven by a desire to craft experiences that resonate
-                with users. I invite you to explore my journey, where each project is a testament to my dedication,
-                curiosity, and love for building something extraordinary.
-            </p>
+        <div class="content">
+            <div class="text-container">
+                <h1 class="head3">ABOUT ME</h1>
+                <p class="intro2">
+                    As a curious web developer with a broad mind, I thrive on exploring new ideas and pushing the
+                    boundaries of what's possible in the digital world. My passion lies in creating websites that are
+                    not
+                    just functional but also innovative and engaging, reflecting a blend of creativity and technical
+                    skill.
+                    I’m constantly learning, experimenting, and growing, driven by a desire to craft experiences that
+                    resonate with users. I invite you to explore my journey, where each project is a testament to my
+                    dedication, curiosity, and love for building something extraordinary.
+                </p>
+            </div>
+            <img src="DALL·E 2024-08-21 11.54.53 - A modern workspace for a web developer. The setting includes a sleek desktop computer displaying a code editor with HTML, CSS, and JavaScript on the s.webp"
+                class="img2" alt="Workspace">
         </div>
     </section>
-    <br><br><br><br><br>
-<hr>
-<br><br><br>
-    <section id="myprojects">
-        <div class="text-container">
-            <h1 class="head3">MY PROJECTS</h1><br>
-            <p class="intro3">
-                Here are some of my recent projects that showcase my skills and creativity as a web developer. Each
-                project is a unique blend of design and functionality, crafted with attention to detail and a passion for
-                innovation. From responsive websites to interactive web applications, these projects reflect my commitment
-                to creating digital experiences that captivate and inspire. Explore my work and let's create something
-                amazing together!
-                <br><br>
-                CLICK ON THE PTOJECTS TO GET FULL VIEW
-            </p><br><br>
-            <a href="https://the-soft-brew.vercel.app/">
-                <img src="Screenshot 2024-08-21 at 12.36.06 PM.png" class="ss1">
-            </a>
-            <a href="https://daily-digest-dfv8.vercel.app/">
-                <img src="Screenshot 2024-08-21 at 12.41.38 PM.png" class="ss2">
-            </a>
-        </div>
-    </section><BR><BR>
 
-    <HR>
-        <HR>
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <p>Email: example@example.com</p>
-                <p>Phone: 123-456-7890</p>
-                <p>Address: 123 Main Street, City, State, Country</p>
-            </section>
-        </main>
+    <section id="myprojects">
+        <div class="content">
+            <h1 class="head3">MY PROJECTS</h1>
+            <div class="project-gallery">
+                <div class="project-card">
+                    <A href="https://daily-digest-dfv8.vercel.app/"><img src="Screenshot 2024-08-21 at 12.36.06 PM.png" class="project-image" alt="Project 1"></A>
+                    <div class="project-description">
+                        <h3>DAILY DIGEST</h3>
+                        <p>A brief description of Project One, highlighting its features and objectives.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <A href="https://the-soft-brew.vercel.app/"><img src="Screenshot 2024-08-21 at 12.41.38 PM.png" class="project-image" alt="Project 2"></A>
+                    <div class="project-description">
+                        <h3>THE SOFT BREW</h3>
+                        <p>A brief description of Project Two, outlining its main aspects and goals.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                   <A HREF="https://location-prompt.vercel.app/"><img src="project3-image.jpg" class="project-image" alt="Project 3"></A> 
+                    <div class="project-description">
+                        <h3>Project Three</h3>
+                        <p>A brief description of Project Three, focusing on its unique features and purpose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-        <footer>
-            <p>&copy; 2024 Apoorva Verma . All rights reserved.</p>
-        </footer>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: example@example.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p>Address: 123 Main Street, City, State, Country</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Apoorva Verma. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
